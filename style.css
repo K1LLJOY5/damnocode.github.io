@@ -1,44 +1,78 @@
 body {
      font-family: 'Plus Jakarta Sans', sans-serif;
+     font-feature-settings: 'liga' off;
      color-scheme: light dark;
      /* dark mode */
      background-color: #252525;
-     color: rgb(222, 222, 222, 0.87);
+     color: rgba(222, 222, 222, 0.87);
 }
 
 @media (prefers-color-scheme: light) {
      /* light mode */
      body {
           background-color: #f5f5f5;
-          color: rgb(37, 42, 48, 0.87);
+          color: rgba(37, 42, 48, 0.87);
      }
-}
-h1 {
-     font-feature-settings: 'ss01','ss02';
-     font-size: 2rem;
-     font-weight: 600;
-     margin: 1;
-}
-h2 {
-     font-feature-settings: 'liga' off, 'ss01';
-     font-size: 1.5rem;
-     font-weight: 500;
-     margin: 0;
-}
-p {
-     font-style: bold;
-     font-weight: 500;
-     margin: 0.5;
+     /* navbar light */
+     #menu {
+          background-color: #e7e7e783;
+          color: #252a30de;
+     }
+
+     .logo-header {
+          border-color: #656565;
+          border-width: 1.5px;
+          border-style:solid;
+          border-radius: 50%;  
+     }
+
+     h1, h2, h3, h4, h5, h6, p {
+          color: rgba(37, 42, 48, 0.87);
+     }
 }
 
 section {
      display: flex;
-     flex-direction: grid;
-     gap: 1rem;
-     justify-content: space-around;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     gap: 1.5rem;
      margin: 1rem;
      padding: 1rem;
      border-radius: 0.5rem;
-     background-color: #333;
-     color: #fff;
+     background-color: #2f2f2f6d;
+     color: rgba(222, 222, 222, 0.87);
+     font-size: 1rem;
+     font-weight: 400;
+     margin: 1;
+}
+
+.logo-text {
+     font-size: 1rem;
+     font-weight: 400;
+     margin: 0.5rem;
+     display: inline-block;
+     vertical-align: top;
+     line-height: 2.1;
+}
+
+.logo-header {
+     image-resolution: 72dpi;
+     width: 42px;
+     height: 42px;
+     border-color: #dededede;
+     border-width: 1.5px;
+     border-style:dashed;
+     border-radius: 50%;
+}
+
+.logo-header:hover, .logo-text:hover, .ttg:hover, .prj:hover, .ktk:hover {
+     color: #fafafa;
+     cursor: pointer;
+}
+
+footer {
+     font-style: italic;
+     font-feature-settings: 'ss01';
+     font-size: 0.7rem;
 }
