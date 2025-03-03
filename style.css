@@ -266,13 +266,13 @@ footer {
      .menu {
           display: none;
           flex-direction: column;
-          position: fixed;
-          top: 55px; 
+          position: absolute;
+          top: 48px; 
           left: 0;
           right: 0;
           background: #2424247e;
           padding: 5px;
-          margin: -30px 135px 0px 135px;
+          margin: -25px 125px 0px 125px;
           text-align: center;
           border-radius: 5px;
           z-index: 1000;
@@ -283,7 +283,8 @@ footer {
      }
 
      .menu li {
-          margin: 5px 0;
+          margin: 8px 0;
+
      }
 
      .menu li a {
@@ -292,6 +293,11 @@ footer {
           font-size: 14px;
           color: rgba(222, 222, 222, 0.87);
           text-decoration: none;
+     }
+
+     .menu li a:hover {
+          background-color: #444;
+          border-radius: 5px;
      }
 
      .menu li a:hover {
