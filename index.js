@@ -23,3 +23,12 @@ document.querySelector('.logo-link').addEventListener('click', function(e) {
         });
     }
 });
+
+// tombol burger
+const tombol = document.querySelector('.tombol');
+const menu = document.querySelector('.menu');
+
+// Event klik untuk menampilkan/menyembunyikan menu
+tombol.addEventListener('click', () => {
+    menu.classList.toggle('aktif');
+});
