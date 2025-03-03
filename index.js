@@ -13,12 +13,13 @@ document.querySelectorAll('.menu-list a').forEach(anchor => {
     });
 });
 
+// Mencegah otomatis pindah
 document.querySelector('.logo-link').addEventListener('click', function(e) {
-    e.preventDefault(); // Mencegah perpindahan default
+    e.preventDefault();
     const target = document.querySelector('#menu');
     if (target) {
         window.scrollTo({
-            top: target.offsetTop - 50, // Sesuaikan offset jika ada navbar tetap
+            top: target.offsetTop - 50, // offset
             behavior: 'smooth'
         });
     }
@@ -28,7 +29,7 @@ document.querySelector('.logo-link').addEventListener('click', function(e) {
 const tombol = document.querySelector('.tombol');
 const menu = document.querySelector('.menu');
 
-// Event klik untuk menampilkan/menyembunyikan menu
+// on off menu
 tombol.addEventListener('click', () => {
     menu.classList.toggle('aktif');
 });
